@@ -3,7 +3,8 @@ body {
   background: linear-gradient(270deg, #1b38ba, #0072ff);
   font-family: Arial, sans-serif;
    height: 100vh; 
-  margin: 0;     
+  margin: 0;
+  color:white;
   display: flex;
   flex-direction: column;
   background-size: 300px auto;  /* adjust size */
@@ -180,5 +181,6 @@ max-width: 100%;
     font-size: 14px;
   }
 }
+
 
 
