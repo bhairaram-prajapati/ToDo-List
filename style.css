@@ -286,3 +286,73 @@ body {
   padding: 20px;
   border-radius: 10px;
 }
+
+
+
+/* 📱 Extra mobile-friendly adjustments */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar-brand {
+    font-size: 1rem;
+  }
+  .navbar-nav .nav-item {
+    margin-left: 0;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  /* Search input */
+  .Search {
+    width: 100% !important;
+    opacity: 1 !important;
+  }
+  .search-wrapper {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .search-btn, .clear-btn {
+    font-size: 14px;
+    position: static;
+    transform: none;
+    align-self: flex-end;
+  }
+
+  /* To-do app container */
+  #todoApp {
+    max-width: 95%;
+    position: static;
+    transform: none;
+    margin: auto;
+  }
+
+  /* Task list */
+  #taskList {
+    max-height: 60vh;
+  }
+
+  /* Floating button */
+  .plusIconClass {
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 0.9rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  #taskInputGrp input, 
+  #taskInputGrp button {
+    font-size: 14px;
+  }
+}
+
+
