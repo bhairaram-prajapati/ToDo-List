@@ -6,7 +6,6 @@ body {
   margin: 0;     
   display: flex;
   flex-direction: column;
-  background: url("bg graphic.png") no-repeat center top;
   background-size: 300px auto;  /* adjust size */
   background-attachment: fixed;
   background-color: #1b38ba;    /* gradient or fallback */
@@ -181,4 +180,5 @@ max-width: 100%;
     font-size: 14px;
   }
 }
+
 
