@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid d-flex align-items-center">
+      <a class="navbar-brand me-3" href="#">TO-DO List</a>
+      <div class="search-wrapper" style="width: 50%; position: relative;">
+        <input type="text" id="searchInput" class="Search" placeholder="Search..." style="width: 40vw;">
+        <button type="button" class="icon-btn search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button type="button" class="icon-btn clear-btn"><i class="fa-solid fa-xmark fa-xl"></i></button>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-right">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Task-List</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Remove Ads</a></li>
+              <li><a class="dropdown-item" href="#">Send Feedback</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Follow Us</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">⚙️ Setting</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="text-center my-3">
+  <img src="istockphoto-1384700413-612x612.png" 
+       alt="Centered image" 
+       style="max-width: 300px; height: auto; opacity: 0.4;">
+</div>
+
+
+<div class="container my-4" id="todoApp">
+  <h3 class="text-center text-white">My To-Do List</h3>
+
+  <!-- Hidden Task Input -->
+  <div class="input-task mb-3 hidden" id="taskInputGrp">
+    <input type="text" id="taskInput" class="taskInputclass" placeholder="Add New Task...">
+    <input type="datetime-local" id="taskTime" class="taskTimeClass">
+    <button class="btn task-submit" id="addTaskBtn">Add</button>
+  </div>
+
+  <ul class="List-grp list-group" id="taskList"></ul>
+</div>
+
+<!-- Floating plus button -->
+<button id="plusIcon" class="plusIconClass"><i class="fa-solid fa-plus" style="color: #FFD43B;"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

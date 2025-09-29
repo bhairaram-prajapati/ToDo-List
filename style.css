@@ -1,0 +1,288 @@
+
+body {
+  background: linear-gradient(270deg, #1b38ba, #0072ff);
+  font-family: Arial, sans-serif;
+   height: 100vh; 
+  margin: 0;     
+  display: flex;
+  flex-direction: column;
+  background: url("istockphoto-1384700413-612x612.png") no-repeat center top;
+  background-size: 300px auto;  /* adjust size */
+  background-attachment: fixed;
+  background-color: #1b38ba;    /* gradient or fallback */
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+body.nav-open {
+  overflow: hidden; /* prevent background scroll when menu open */
+}
+
+
+.navbar {
+  background-color: rgb(36, 75, 247) !important; 
+}
+
+.search-wrapper{
+max-width: 100%;
+  flex: 1;  
+}
+
+.Search{
+  padding-right: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: none;
+  color: black;
+  padding-left:10px ;
+  border: none;
+}
+.search-btn{
+  position: absolute;
+  top: 50%;
+  right: 10vw;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+.navbar-nav .nav-item {
+  margin-left: 20px; 
+}
+.navbar-toggler{
+  border: none;
+  
+}
+.clear-btn {
+  display: none;  /* hide by default */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: black;
+}
+
+
+.search-btn{display: flex;}
+.clear-btn{display: none;}
+
+.search-wrapper{
+  position: relative;
+  display: flex;
+  align-items: center;
+
+
+}
+.Search {
+  width: 0;                   
+  padding: 5px 10px;
+  opacity: 0;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  transition: all 0.4s ease;   
+}
+
+.Search.show {
+  width: 200px;   
+  opacity: 1;
+}
+
+.search-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.dropdown-menu{
+  background: none;
+  border: none;
+}
+.dropdown-item:hover{
+  background-color:aliceblue;
+  border-radius: 15px;
+
+}
+.navbar-collapse {
+  position: absolute;
+  top: 100%;    
+  left: 0;
+  width: 100%;
+  background: #0d6efd; 
+  z-index: 999;
+}
+@media (max-width: 480px) {
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .navbar-nav .nav-item {
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+
+  .navbar-collapse {
+    position: static; 
+    background: #0d6efd;
+  }
+
+  .search-wrapper {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+  }
+
+  .Search.show {
+    width: 100%; 
+  }
+
+  .search-btn {
+    align-self: flex-end;
+    margin-left: 0;
+    font-size: 16px;
+  }
+
+  .clear-btn {
+    left: auto;
+    right: 0;
+    display: block;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .d-flex img {
+    max-width: 150px;
+    height: auto;
+    opacity: 0.4;
+  }
+
+  body {
+    overflow-y: auto;
+  }
+}
+.navbar-collapse {
+  position: static; /* was absolute */
+  width: 100%;
+  background: #0d6efd; 
+  z-index: 999;
+  max-height: 100vh; /* optional, prevent overflow */
+  overflow-y: auto;  /* scroll inside menu if needed */
+}
+.plusIconClass{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color:#007bff ;
+  color: white;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+  
+}
+.plusIconClass:hover{
+  background-color: #0643b4;
+}
+@media (max-width: 576px) {
+  #taskInputGrp {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #taskInputGrp input,
+  #taskInputGrp button {
+    width: 100%;
+  }
+
+  .plusIconClass {
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+}
+body {
+  background: linear-gradient(270deg, #1b38ba, #0072ff);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden { display: none; }
+
+/* Floating Action Button */
+.plusIconClass{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color:#007bff ;
+  color: white;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+.plusIconClass:hover{ background-color: #0643b4; }
+
+#taskInputGrp { transition: all 0.3s ease; }
+#taskInputGrp input, #taskInputGrp button { margin-bottom: 5px; }
+
+@media (max-width: 576px) {
+  #taskInputGrp { flex-direction: column; gap: 10px; }
+  #taskInputGrp input, #taskInputGrp button { width: 100%; }
+  .plusIconClass { bottom: 15px; right: 15px; width: 50px; height: 50px; font-size: 22px; }
+}
+#taskList {
+  display: flex;
+  flex-direction: column;    /* stack tasks top → bottom */
+  justify-content: flex-start; /* start at top */
+  max-height: 300px;         /* optional scroll */
+  overflow-y: auto;
+  padding-left: 0;
+  list-style: none;
+}
+.image-wrapper {
+  position: relative;
+}
+
+.image-wrapper img {
+  width: 100%;
+  opacity: 0.3; /* faded background effect */
+}
+
+#todoApp {
+  position: absolute;
+  top: 20px;       /* distance from top of image */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;     /* make sure it's on top of the image */
+  max-width: 500px;
+  background:none; /* optional dark overlay */
+  padding: 20px;
+  border-radius: 10px;
+}
